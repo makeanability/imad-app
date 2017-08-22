@@ -1,9 +1,9 @@
 console.log('Loaded!');
 
 
-var img=document.getElementById('modi');
+var img=document.getElementById('txt');
 img.onclick=function()
 {
     
-    img.style.marginLeft='100px';
+    img.innerHTML='it modify';
 };
