@@ -1,9 +1,9 @@
 console.log('Loaded!');
 
 
-var e=document.getElementById('modi');
-e.onclick=function()
+var img=document.getElementById('modi');
+img.onclick=function()
 {
     
-    e.style.marginLeft='100px';
+    img.style.marginLeft='100px';
 };
