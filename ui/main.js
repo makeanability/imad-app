@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 
-var img=document.getElementById('txt');
+var img=document.getElementById('madi');
 img.onclick=function()
 {
     
