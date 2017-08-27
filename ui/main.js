@@ -5,5 +5,5 @@ var img=document.getElementById('txt');
 img.onclick=function()
 {
     
-    img.innerHTML="it modify";
+    img.innerHTML="ohh sorry!! The System Will Alter";
 };
