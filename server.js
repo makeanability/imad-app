@@ -90,7 +90,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/:artical_name', function (req, res) {
-    var art_name=req.params.artival_name;
+    var art_name=req.params.artical_name;
   res.send(create_template(articals[art_name]));
 });
 app.get('/artical-2', function (req, res) {
