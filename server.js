@@ -37,7 +37,7 @@ var html_template=
   <body>
        
       <div class="contain">
-          <div>${head}</div><br/>
+          <div>${head}</div><hr/>
             ${content}
   </div>
   </body>
