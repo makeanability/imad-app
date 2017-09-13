@@ -35,8 +35,9 @@ var html_template=
   </head>
   
   <body>
-       <div>${head}</div><br/>
+       
       <div class="contain">
+          <div>${head}</div><br/>
             ${content}
   </div>
   </body>
