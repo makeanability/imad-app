@@ -19,7 +19,7 @@ var artical_one=
     
 };
 function create_template(data){
-var title=data.tile;
+var title=data.title;
 var head=data.head;
 var content=data.content;
 
@@ -35,6 +35,7 @@ var html_template=
   </head>
   
   <body>
+       <div>${head}</div><br/>
       <div class="contain">
             ${content}
   </div>
