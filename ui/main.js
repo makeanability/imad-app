@@ -1,9 +1,9 @@
 console.log('Loaded!');
 
 
-var img=document.getElementById('txt');
-img.onclick=function()
+var Text=document.getElementById('txt');
+Text.onclick=function()
 {
     
-    img.innerHTML="ohh sorry!! The System Will Alter";
+    Text.innerHTML="You Change The Content Of Text";
 };
