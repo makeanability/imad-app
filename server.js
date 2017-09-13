@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var artical_one=
-{
+var articals={
+          artical_one:{
     title:'ARTICAL ONE',
     head:'HOME',
     content:`
@@ -17,6 +17,31 @@ var artical_one=
     
     
     
+}
+          ,artical_two:{
+    title:'ARTICAL TWO',
+    head:'HOME',
+    content:`
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>`
+    
+    
+    
+}
+           ,artical_THREE:{
+    title:'ARTICAL THREE',
+    head:'HOME',
+    content:`
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>`
+    
+    
+    
+}
+
+
 };
 function create_template(data){
 var title=data.title;
@@ -64,7 +89,11 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-app.get('/artical-1', function (req, res) {
+app.get('/:artical_name', function (req, res) {
+    var art_name=req.params.artival_name;
+  res.send(create_template(articals[art_name]));
+});
+app.get('/artical-2', function (req, res) {
   res.send(create_template(artical_one));
 });
 
