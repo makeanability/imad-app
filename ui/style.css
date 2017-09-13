@@ -20,3 +20,14 @@ body {
     height: 200px;
 }
 
+.contain
+              {
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: sans-serif;
+    padding-left:20px;
+    padding-right:20px;
+    color: forestgreen;
+                  
+  }
+
