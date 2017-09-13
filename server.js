@@ -5,6 +5,51 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var artical_one=
+{
+    title:'ARTICAL ONE',
+    head:'HOME',
+    content:`
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>
+            <div><p>This is my first artical,its vaery blesure to post my own atrical and very thankfull to all of you</p></div>`
+    
+    
+    
+};
+function create_template(data){
+var title=data.tile;
+var head=data.head;
+var content=data.content;
+
+var html_template=
+`
+<!DocType html >
+<html>
+  <head>
+      <title>
+          ${title}
+          </title>
+        <link href="/ui/style.css" rel="stylesheet"/>  
+  </head>
+  
+  <body>
+      <div class="contain">
+            ${content}
+  </div>
+  </body>
+  
+</html>
+
+`;
+
+return html_template
+
+}
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -18,7 +63,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/artical-1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'artical-1.html'));
+  res.send(create_template(artical_one));
 });
 
 
