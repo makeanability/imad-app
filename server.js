@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articals={
-          artical_one:{
+          'artical_one':{
     title:'ARTICAL ONE',
     head:'HOME',
     content:`
@@ -18,7 +18,7 @@ var articals={
     
     
 }
-          ,artical_two:{
+          ,'artical_two':{
     title:'ARTICAL TWO',
     head:'HOME',
     content:`
@@ -29,7 +29,7 @@ var articals={
     
     
 }
-           ,artical_THREE:{
+           ,'artical_three':{
     title:'ARTICAL THREE',
     head:'HOME',
     content:`
