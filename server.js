@@ -112,7 +112,7 @@ app.get('/test-db',function(req,res)
         else
         {
             
-            res.send(JSON.stringify(rs.row));
+            res.send(JSON.stringify(rs.rows));
         }
     });
 });
