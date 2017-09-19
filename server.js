@@ -1,9 +1,24 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var pool=require('pg').pool;
+
+var config={
+ user: 'makeanability',
+ database: 'makeanability',
+ host: 'db.imad.hasura-app.io',
+ port: '5432',
+ password: process.env.DB_PASSWORD
+ 
+};
+
+
+
 
 var app = express();
 app.use(morgan('combined'));
+
+
 
 
 var articals={
@@ -80,6 +95,24 @@ return html_template
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var pool=new pool(config);
+app.get('/test-db',function(req,res)
+{
+    pool.query('SELECT  * FROM user',function(err,rs)
+    {
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            
+            res.send(JSON.stringify(rs));
+        }
+    });
+});
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
