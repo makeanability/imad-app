@@ -100,6 +100,22 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var pool=new pool(config);
+app.get('/test-db',function(req,res)
+{
+    pool.query('SELECT * FROM user',function(err,rs)
+    {
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            
+            res.send(JSON.stringify(rs));
+        }
+    });
+});
 
 
 
