@@ -123,7 +123,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/package', function (req, res) {
+app.get('package', function (req, res) {
   res.sendFile( 'package.json');
 });
 
