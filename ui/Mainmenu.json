@@ -1,0 +1,26 @@
+{
+    "posts":[
+        
+        {
+            "title":"Inverter",
+            "thumbnail":"https://d30y9cdsu7xlg0.cloudfront.net/png/22239-200.png",
+            "category":"Inverter"
+        }
+        ,
+        {
+            "title":"Battery",
+            "thumbnail":"https://d30y9cdsu7xlg0.cloudfront.net/png/186-200.png",
+            "category":"Battery"
+            
+        }
+         ,
+        {
+            "title":"Panel",
+            "thumbnail":"https://d30y9cdsu7xlg0.cloudfront.net/png/2062-200.png",
+            "category":"Panel"
+            
+        } 
+        
+        ]
+    
+}
