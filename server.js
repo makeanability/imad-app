@@ -124,7 +124,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/ui/package', function (req, res) {
-  res.sendFile(path.join( 'package.json'));
+  res.sendFile( 'package.json');
 });
 
 app.get('/ui/madi.png', function (req, res) {
